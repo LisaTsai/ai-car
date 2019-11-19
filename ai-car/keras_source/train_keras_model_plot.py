@@ -306,6 +306,12 @@ def main():
     if args.load_weights:
         model.load_weights(args.weights_file)
 
+    # 打亂數據集
+    index = np.arange(len(label))
+    np.random.shuffle(index)
+    trainset = trainset[index, :, :, :, :]
+    label = label[index]
+
     # 訓練模型
     if args.epochs > 0:
         model.fit(
