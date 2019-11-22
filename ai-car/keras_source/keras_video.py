@@ -9,7 +9,7 @@ from keras.models import model_from_json
 
 def main():
 
-    arg_parser = argparse.ArgumentParser(description='Execute keras model for recognition。')
+    arg_parser = argparse.ArgumentParser(description='Execute keras model for recognition')
     arg_parser.add_argument(
         '--model-file',
         required=True,
